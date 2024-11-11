@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "RaidRes Extractor",
+  "version": "1.0",
+  "description": "Extracts item data from RaidRes page and copies it to clipboard",
+  "permissions": [
+    "activeTab",
+    "clipboardWrite",
+	"scripting"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {}
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://raidres.fly.dev/res/"],
+      "js": ["content.js"]
+    }
+  ]
+}
